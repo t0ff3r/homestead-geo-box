@@ -76,6 +76,11 @@ class Homestead
         end
     end
 
+    # Setup GEOS library
+    config.vm.provision "shell" do |s|
+      s.inline = "./scripts/install-geos.sh"
+    end
+
     # Configure All Of The Server Environment Variables
     if settings.has_key?("variables")
       settings["variables"].each do |var|
