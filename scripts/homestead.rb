@@ -78,7 +78,7 @@ class Homestead
 
     # Setup GEOS library
     config.vm.provision "shell" do |s|
-      s.inline = "./scripts/install-geos.sh"
+      s.path = "./scripts/install-geos.sh"
     end
 
     # Configure All Of The Server Environment Variables

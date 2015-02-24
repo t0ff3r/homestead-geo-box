@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 echo "Starting installation of GEOS"
-wget http://download.osgeo.org/geos-3.4.2.tar.bz2
+wget http://download.osgeo.org/geos/geos-3.4.2.tar.bz2
 tar -xjvf geos-3.4.2.tar.bz2
 cd geos-3.4.2/
 ./configure --enable-php
