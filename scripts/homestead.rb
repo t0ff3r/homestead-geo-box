@@ -23,6 +23,8 @@ class Homestead
     config.vm.network "forwarded_port", guest: 3306, host: 33060
     config.vm.network "forwarded_port", guest: 5432, host: 54320
 
+    config.ssh.forward_agent = true
+
     # Add Custom Ports From Configuration
     if settings.has_key?("ports")
       settings["ports"].each do |port|
